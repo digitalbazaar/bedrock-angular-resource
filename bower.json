@@ -1,6 +1,7 @@
 {
   "name": "bedrock-angular-resource",
-  "main": "./app.js",
+  "main": "./resource.js",
+  "moduleType": ["amd"],
   "ignore": [],
   "dependencies": {
   }

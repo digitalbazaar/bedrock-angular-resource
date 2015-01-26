@@ -16,7 +16,7 @@ define([
 
 'use strict';
 
-var module = angular.module('app.resource', []);
+var module = angular.module('bedrock.resource', []);
 
 module.service(refreshService);
 module.service(resourceService);

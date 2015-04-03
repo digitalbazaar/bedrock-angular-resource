@@ -13,7 +13,7 @@ active collection data up to date.
 ## Quick Examples
 
 ```js
-angular.module('example', ['bedrock.resource']).service('my-service', factory);
+angular.module('example', ['bedrock.resource']).service('myService', factory);
 
 /* @ngInject */
 function factory(brRefreshService, brResourceService) {

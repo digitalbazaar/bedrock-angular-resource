@@ -55,8 +55,6 @@ function() {
           $scope.$apply();
         });
     })();
-
-    return service;
   }
 
   return {myController: factory};

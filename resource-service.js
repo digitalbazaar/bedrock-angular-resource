@@ -123,6 +123,16 @@ function factory($rootScope, $http, $location, brModelService) {
       $location.protocol() + '://' +
       $location.host() + ':' + $location.port() +
       $location.path();
+    // add in any known params that are part of the resource id
+    var resourceParams = options.resourceParams;
+    function _param(param) {
+      return param + '=' + encodeURIComponent($location.search()[param]);
+    }
+    if(angular.isString(resourceParams)) {
+      currentId += '?' + _param(resourceParams);
+    } else if(angular.isArray(resourceParams)) {
+      currentId += '?' + resourceParams.map(_param).join('&');
+    }
     return this.get(currentId, options);
   };
 

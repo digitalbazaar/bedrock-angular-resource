@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+- String or array 'resourceParams' option to getCurrent() to add specific query
+  params to the current path.
+
 ## [1.0.0] - 2015-04-08
 
 ## 0.1.0 (up to early 2015)

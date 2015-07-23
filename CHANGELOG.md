@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2015-07-23
+
 ### Added
 - String or array 'resourceParams' option to getCurrent() to add specific query
   params to the current path.
@@ -12,5 +14,6 @@
 
 - See git history for changes.
 
-[Unreleased]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/0.1.0...1.0.0

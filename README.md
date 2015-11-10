@@ -124,7 +124,7 @@ Load the entire collection.
 
 Load a single resource.
 
-### brResourceService.Collection.get(options)
+### brResourceService.Collection.getCurrent(options)
 
 Load the current resource (based on `$location`).
 

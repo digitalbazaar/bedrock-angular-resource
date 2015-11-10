@@ -1,6 +1,6 @@
 {
   "name": "bedrock-angular-resource",
-  "version": "1.0.2-dev",
+  "version": "1.0.2",
   "main": "./resource.js",
   "moduleType": ["amd"],
   "ignore": [],

@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- update() option `url` to explicitly set the URL to POST the update to.
+
 ## [1.0.1] - 2015-07-23
 
 ### Added

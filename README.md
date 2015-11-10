@@ -140,6 +140,10 @@ Add a resource to remote storage and local storage.
 
 Update a resource in remote storage and local storage.
 
+Options:
+- **url**: url to resource ([resource.id])
+- **get**: url to get resource ([options.url || resource.id])
+
 ### brResourceService.Collection.del(resourceId, options)
 
 Delete a resource in remote storage and local storage.

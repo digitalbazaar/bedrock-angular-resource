@@ -186,7 +186,8 @@ function factory($rootScope, $http, $location, brModelService) {
     options = options || {};
     self.startLoading();
     var config = self._buildConfig(options);
-    return Promise.resolve($http.post(resource.id, resource, config))
+    var url = options.url || resource.id;
+    return Promise.resolve($http.post(url, resource, config))
       .then(function(response) {
         // don't update collection expiration time
         // re-get resource to update collection
@@ -194,7 +195,8 @@ function factory($rootScope, $http, $location, brModelService) {
           force: true,
           update: self._doUpdate(options)
         };
-        return self.get(options.get || resource.id, getOpts);
+        return self.get(options.get || options.url || resource.id,
+          getOpts);
       }).then(function(updatedResource) {
         return self.finishLoading().then(function() {
           $rootScope.$applyAsync();

@@ -88,7 +88,7 @@ function factory($rootScope, $http, $location, brModelService) {
     options = options || {};
     if(Date.now() < self.expires && !options.force) {
       // check if resource already loaded
-      var current = _.findWhere(self.storage, {id: resourceId});
+      var current = _.find(self.storage, {id: resourceId});
       if(current) {
         return Promise.resolve(current);
       }
@@ -142,7 +142,7 @@ function factory($rootScope, $http, $location, brModelService) {
     options = options || {};
     // update collection if resource not present
     if(self._doUpdate(options)) {
-      if(!_.findWhere(self.storage, {id: resource.id})) {
+      if(!_.find(self.storage, {id: resource.id})) {
         self.storage.push(resource);
       }
     }
@@ -221,7 +221,7 @@ function factory($rootScope, $http, $location, brModelService) {
         // don't update collection expiration time
         // update collection if resource present
         if(self._doUpdate(options)) {
-          if(_.findWhere(self.storage, {id: resourceId})) {
+          if(_.find(self.storage, {id: resourceId})) {
             brModelService.removeFromArray(resourceId, self.storage);
           }
         }

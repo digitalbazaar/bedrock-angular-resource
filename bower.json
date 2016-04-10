@@ -5,7 +5,7 @@
   "moduleType": ["amd"],
   "ignore": [],
   "dependencies": {
-    "angular": "~1.3.20",
+    "bedrock-angular": "^1.0.0",
     "lodash": "^4.1.0"
   }
 }

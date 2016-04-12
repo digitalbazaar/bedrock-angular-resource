@@ -187,7 +187,8 @@ function factory($rootScope, $http, $location, brModelService) {
     self.startLoading();
     var config = self._buildConfig(options);
     var url = options.url || resource.id;
-    return Promise.resolve($http.post(url, resource, config))
+    return Promise.resolve(
+      $http[options.method || 'post'](url, resource, config))
       .then(function(response) {
         // don't update collection expiration time
         // re-get resource to update collection

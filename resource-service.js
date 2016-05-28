@@ -6,7 +6,7 @@
  * @author David I. Lehn
  * @author Dave Longley
  */
-define(['lodash'], function(_) {
+define(['angular', 'lodash'], function(angular, _) {
 
 'use strict';
 

@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [2.1.0] - 2016-06-19
+
+### Added
+- Use a request queue for `.get` and `.getAll` collection calls by default.
+
 ## [2.0.1] - 2016-04-20
 
 ### Changed
@@ -33,11 +38,3 @@
 ## 0.1.0 (up to early 2015)
 
 - See git history for changes.
-
-[Unreleased]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/2.0.1...HEAD
-[2.0.1]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/2.0.0...2.0.1
-[2.0.0]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.3...2.0.0
-[1.0.3]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.2...1.0.3
-[1.0.2]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/digitalbazaar/bedrock-angular-resource/compare/0.1.0...1.0.0

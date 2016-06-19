@@ -60,7 +60,7 @@ function factory($rootScope, $http, $location, brModelService) {
       return Promise.resolve(self.storage);
     }
     self.startLoading();
-    var config = self._buildConfig(options);
+    var config = self._buildConfig(options, {queue: true});
     var url = self._getUrl('getAll');
     return Promise.resolve($http.get(url, config))
       .then(function(response) {
@@ -95,7 +95,7 @@ function factory($rootScope, $http, $location, brModelService) {
     }
     // FIXME: reject if resourceId not a sub-url of collection
     self.startLoading();
-    var config = self._buildConfig(options);
+    var config = self._buildConfig(options, {queue: true});
     return Promise.resolve($http.get(resourceId, config))
       .then(function(response) {
         // update collection but not collection expiration time
@@ -256,8 +256,10 @@ function factory($rootScope, $http, $location, brModelService) {
 
   /**
    * Build a $http config from collection options.
+   *
+   * @param defaults default options to use.
    */
-  service.Collection.prototype._buildConfig = function(options) {
+  service.Collection.prototype._buildConfig = function(options, defaults) {
     var self = this;
 
     var config = {};
@@ -271,6 +273,11 @@ function factory($rootScope, $http, $location, brModelService) {
     // extend with current param options
     if('params' in options) {
       config.params = angular.extend(config.params || {}, options.params);
+    }
+    if('queue' in options) {
+      config.queue = options.queue;
+    } else if(defaults && 'queue' in defaults) {
+      config.queue = defaults.queue;
     }
     return config;
   };

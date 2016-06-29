@@ -217,7 +217,8 @@ function factory($rootScope, $http, $location, brModelService) {
     options = options || {};
     self.startLoading();
     var config = self._buildConfig(options);
-    return Promise.resolve($http.delete(resourceId, config))
+    var url = options.url || resourceId;
+    return Promise.resolve($http.delete(url, config))
       .then(function(response) {
         // don't update collection expiration time
         // update collection if resource present

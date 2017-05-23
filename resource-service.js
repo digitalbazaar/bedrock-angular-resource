@@ -1,17 +1,16 @@
 /*!
  * Resource Service.
  *
- * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author David I. Lehn
  * @author Dave Longley
  */
-define(['angular', 'lodash'], function(angular, _) {
-
-'use strict';
+import angular from 'angular';
+import _ from 'lodash';
 
 /* @ngInject */
-function factory($rootScope, $http, $location, brModelService) {
+export default function factory($rootScope, $http, $location, brModelService) {
   var service = {};
 
   // create a new collection
@@ -125,6 +124,7 @@ function factory($rootScope, $http, $location, brModelService) {
       $location.path();
     // add in any known params that are part of the resource id
     var resourceParams = options.resourceParams;
+
     function _param(param) {
       return param + '=' + encodeURIComponent($location.search()[param]);
     }
@@ -189,7 +189,7 @@ function factory($rootScope, $http, $location, brModelService) {
     var url = options.url || resource.id;
     return Promise.resolve(
       $http[options.method || 'post'](url, resource, config))
-      .then(function(response) {
+      .then(function() {
         // don't update collection expiration time
         // re-get resource to update collection
         var getOpts = {
@@ -219,7 +219,7 @@ function factory($rootScope, $http, $location, brModelService) {
     var config = self._buildConfig(options);
     var url = options.url || resourceId;
     return Promise.resolve($http.delete(url, config))
-      .then(function(response) {
+      .then(function() {
         // don't update collection expiration time
         // update collection if resource present
         if(self._doUpdate(options)) {
@@ -319,7 +319,3 @@ function factory($rootScope, $http, $location, brModelService) {
 
   return service;
 }
-
-return {brResourceService: factory};
-
-});

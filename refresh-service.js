@@ -1,16 +1,12 @@
 /*!
  * Refresh Service.
  *
- * Copyright (c) 2014-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2014-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function factory($rootScope, brResourceService) {
+export default function factory($rootScope, brResourceService) {
   var service = {};
 
   /**
@@ -64,7 +60,3 @@ function factory($rootScope, brResourceService) {
 
   return service;
 }
-
-return {brRefreshService: factory};
-
-});

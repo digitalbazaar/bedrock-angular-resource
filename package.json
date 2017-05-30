@@ -7,6 +7,9 @@
     "angular": "~1.6.4",
     "lodash": "^4.1.0"
   },
+  "bedrock": {
+    "browserDependencies": "all"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/digitalbazaar/bedrock-angular-resource.git"

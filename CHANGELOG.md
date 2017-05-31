@@ -3,7 +3,7 @@
 ## 3.0.2 - 2017-05-31
 
 ### Fixed
-- Remove ``$rootScope.app.service` references.
+- Remove `$rootScope.app.service` references.
 
 ## 3.0.1 - 2017-05-30
 

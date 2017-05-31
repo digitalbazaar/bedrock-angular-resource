@@ -55,8 +55,5 @@ export default function factory($rootScope, brResourceService) {
     $rootScope.$broadcast('refreshData');
   };
 
-  // expose service to scope
-  $rootScope.app.services.refresh = service;
-
   return service;
 }

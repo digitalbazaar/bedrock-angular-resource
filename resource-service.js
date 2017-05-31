@@ -314,8 +314,5 @@ export default function factory($rootScope, $http, $location, brModelService) {
     return true;
   };
 
-  // expose service to scope
-  $rootScope.app.services.resource = service;
-
   return service;
 }

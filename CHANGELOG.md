@@ -1,5 +1,10 @@
 # bedrock-angular-resource ChangeLog
 
+## 3.0.3 - 2017-11-13
+
+### Changed
+- Replace angular dependency with bedrock-angular.
+
 ## 3.0.2 - 2017-05-31
 
 ### Fixed

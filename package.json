@@ -1,6 +1,6 @@
 {
   "name": "bedrock-angular-resource",
-  "version": "3.0.3-0",
+  "version": "3.0.3",
   "description": "A bedrock AngularJS module that provides services for managing resources and handling resources refreshing.",
   "main": "index.js",
   "dependencies": {
